@@ -1,6 +1,6 @@
 import random as rd
 import numpy as np
-from commonfun import euclidian
+from commonfun import euclidian, cal_loss
 
 class Knn:
     def __init__(self,k,verb=True):
