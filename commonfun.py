@@ -33,3 +33,9 @@ def manhatten(x1,x2):
 def mahalanobis(x1,x2,sigma):
     ## x1 x2 are mean substracted
     return np.dot(x1.T,np.dot(sigma,x2))
+
+def test_train_dt(databae):
+    panda = databae.copy()
+    y_train = np.array(panda.pop(panda.keys()[-1]))
+    x_train = panda.values
+    return x_train,y_train
