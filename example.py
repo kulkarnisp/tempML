@@ -5,8 +5,8 @@ import bayes
 import neighbors
 from commonfun import cal_loss, test_train_dt
 
-db3a = pd.read_csv("data\P1a_train_data.txt",header=None)
-db3b = pd.read_csv("data\P1b_train_data.txt",header=None)
+db3a = pd.read_csv("data\P1a_train_data_2D.txt",header=None)
+db3b = pd.read_csv("data\P1b_train_data_2D.txt",header=None)
 
 x_train,y_train = test_train_dt(db1a)
 x_test,y_test = test_train_dt(dt1a)
