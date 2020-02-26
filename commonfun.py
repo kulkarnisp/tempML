@@ -1,4 +1,5 @@
 import numpy as np
+from matplotlib import pyplot as plt
 import functools as ft
 
 
@@ -39,3 +40,11 @@ def test_train_dt(databae):
     y_train = np.array(panda.pop(panda.keys()[-1]))
     x_train = panda.values
     return x_train,y_train
+
+clrs = np.array(["g","r","b"])
+def plotdb(db1,save = 0):
+    db1.plot(x=0,y=1,kind="scatter",color=clrs[db1[2]])
+    plt.xlabel("x")
+    plt.ylabel("y")
+    if save!=0:
+        plt.savefig(save)
