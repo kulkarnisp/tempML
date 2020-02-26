@@ -2,7 +2,7 @@ import random as rd
 import numpy as np
 from commonfun import euclidian
 
-class knn:
+class Knn:
     def __init__(self,k,verb=True):
         self.k = k
         self.verbose = verb
