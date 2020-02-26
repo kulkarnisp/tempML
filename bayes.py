@@ -3,7 +3,7 @@ import numpy as np
 from commonfun import diff,vnorm,cal_loss
 
 
-class bayes:
+class Bayes:
     ## since class conditional densities in every problem is normal
     def __init__(self,num_class=2,verb = True):
         self.k = num_class
