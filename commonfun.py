@@ -2,6 +2,13 @@ import numpy as np
 from matplotlib import pyplot as plt
 import functools as ft
 
+def oilpipe(dbase,dtest,model,verb=True):
+    x_train,y_train = test_train_dt(dbase)
+#     clf = model(verb=verb) model IS clf
+    model.fit(x_train,y_train)
+    x_test,y_test = test_train_dt(dtest)
+    y_pred = model.predict(x_test)
+    return cal_loss(y_pred,y_test)
 
 def vnorm(Xv,mu,sigma):
     Si = np.linalg.inv(sigma)
