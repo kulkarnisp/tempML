@@ -23,3 +23,13 @@ def cal_eff(y_pred,y_test):
     
 def diff(xx,yy,yi):
     return np.array([x for x,y in zip(xx,yy) if y ==yi])
+def euclidian(x1,x2):
+    return np.sum((x1-x2)**2)
+
+def manhatten(x1,x2):
+    return np.sum(np.abs(x1-x2))
+
+
+def mahalanobis(x1,x2,sigma):
+    ## x1 x2 are mean substracted
+    return np.dot(x1.T,np.dot(sigma,x2))
